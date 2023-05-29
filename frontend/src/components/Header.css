@@ -1,0 +1,126 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    z-index: 9999; /* Valeur supérieure */
+  }
+  
+  
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+  }
+  
+  .menu ul ul li {
+    display: block;
+  }
+  
+  .menu ul ul a {
+    padding: 10px;
+  }
+  
+  .menu li:hover > ul {
+    display: block;
+  }
+  
+  .menu-toggler {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .menu-toggler {
+      display: block;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  
+    .menu {
+      z-index: 9999; /* ajouter une propriété z-index pour que le menu apparaisse au-dessus des autres éléments */
+    }
+  
+  
+  
+    .menu ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      padding: 0;
+      width: 100%;
+    }
+    
+    .menu ul.open {
+      display: block;
+    }
+    
+    .menu li {
+      position: relative;
+    }
+    
+    .menu li:hover > ul {
+      display: block;
+    }
+    
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    .menu li:hover {
+      background-color: #444;
+    }
+    
+    .menu a:hover {
+      background-color: #444;
+    }
+    
+    .nav-menu {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-menu li {
+      width: 100%;
+    }
+    
+    .nav-menu a {
+      padding: 10px;
+      border-bottom: 1px solid #fff;
+    }
+  }

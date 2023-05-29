@@ -1,0 +1,25 @@
+.product-card {
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    }
+    
+    .product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    }
+    
+    .product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    }
+    
+    .product-rating {
+    margin-bottom: 0.5rem;
+    }
+    
+    .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    }

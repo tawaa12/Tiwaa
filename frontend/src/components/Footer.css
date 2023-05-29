@@ -1,0 +1,40 @@
+.brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    overflow: hidden;
+    animation: slide-in 1s ease-in-out;
+    }
+    
+    .brand-logo {
+    flex: 0 0 20%;
+    text-align: center;
+    max-width: 100px;
+    margin: 0 10px;
+    }
+    
+    .brand-logo img {
+    height: 60px;
+    object-fit: contain;
+    object-position: center;
+    }
+    
+    @keyframes slide-in {
+    0% {
+    transform: translateX(-100%);
+    }
+    100% {
+    transform: translateX(0);
+    }
+    }
+    
+    @media (max-width: 576px) {
+    .brands {
+    height: 80px;
+    }
+    
+    .brand-logo img {
+    height: 40px;
+    }
+    }
