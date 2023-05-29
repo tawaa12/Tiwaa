@@ -41,6 +41,7 @@ const LoginScreen = ({ location, history }) => {
       document.body.style.backgroundColor = null;
       // Vous pouvez également supprimer les autres propriétés CSS ici si vous en avez modifié
       // par exemple: document.body.style.color = null;
+      // Voila Oleko
     };
   }, []);
 
