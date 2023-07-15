@@ -56,10 +56,10 @@ const ProfileScreen = ({ location, history }) => {
   return (
     <Row>
       <Col md={3}>
-        <h2>Profil de l'utilisateur</h2>
+        <h2>User profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
         { }
-        {success && <Message variant='success'>Mise à jour du profil</Message>}
+        {success && <Message variant='success'>Profile update</Message>}
         {loading ? (
           <Loader />
         ) : error ? (
@@ -77,7 +77,7 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId='email'>
-              <Form.Label>Adresse électronique</Form.Label>
+              <Form.Label>E-mail address</Form.Label>
               <Form.Control
                 type='email'
                 placeholder='Enter email'
@@ -87,7 +87,7 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId='password'>
-              <Form.Label>Mot de passe</Form.Label>
+              <Form.Label>Password</Form.Label>
               <Form.Control
                 type='password'
                 placeholder='Enter password'
@@ -97,7 +97,7 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId='confirmPassword'>
-              <Form.Label>Confirmer le mot de passe</Form.Label>
+              <Form.Label>Confirm password</Form.Label>
               <Form.Control
                 type='password'
                 placeholder='Confirm password'
@@ -107,13 +107,13 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Button type='submit' variant='primary'>
-              Mise à jour
+            Update
             </Button>
           </Form>
         )}
       </Col>
       <Col md={9}>
-        <h2>Mes commandes</h2>
+        <h2>My orders</h2>
         {loadingOrders ? (
           <Loader />
         ) : errorOrders ? (

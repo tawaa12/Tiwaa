@@ -101,8 +101,8 @@ const handleSubMenu = (event) => {
       {isOpen ? <i className="fas fa-times"></i> : <span>&#9776;</span>}
     </button>
     <ul class={isOpen ? "open" : ""}>
-      <li><Link to='/Presentation' className="">A propos de nous</Link></li>
-      <li><a  onClick={handleSubMenu}>Nos produits </a>
+      <li><Link to='/Presentation' className="">About Our Company</Link></li>
+      <li><a  onClick={handleSubMenu}>Our products</a>
         <ul>
         <li><Link to='/search/hair' className="">Hair</Link></li>
         <li><Link to='/search/body' className="">the body</Link></li>

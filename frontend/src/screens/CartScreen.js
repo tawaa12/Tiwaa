@@ -32,10 +32,10 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Panier d'achat</h1>
+        <h1>Shopping cart </h1>
         {cartItems.length === 0 ? (
           <Message>
-            Votre panier est vide <Link to='/'>Retourner</Link>
+          Votre panier est vide <Link to='/'>Return</Link>
           </Message>
         ) : (
           <ListGroup variant='flush'>
@@ -86,8 +86,8 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
-                Sous-total ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                articles
+              Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+              Items
               </h2>
 
               {cartItems
@@ -101,7 +101,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Passer à la caisse
+                Go to the checkout
               </Button>
             </ListGroup.Item>
           </ListGroup>

@@ -96,10 +96,10 @@ const ProductEditScreen = ({ match, history }) => {
   return (
     <>
       <Link to='/admin/productlist' className='btn btn-light my-3'>
-        Retourner
+      Return
       </Link>
       <FormContainer>
-        <h1>Modifier le produit</h1>
+        <h1>Edit the product</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -109,7 +109,7 @@ const ProductEditScreen = ({ match, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
-              <Form.Label>Nom</Form.Label>
+              <Form.Label>Name</Form.Label>
               <Form.Control
                 type='name'
                 placeholder='Enter name'
@@ -146,7 +146,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='brand'>
-              <Form.Label>Marque</Form.Label>
+              <Form.Label>Brand</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter brand'
@@ -156,7 +156,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='countInStock'>
-              <Form.Label>Compte En stock</Form.Label>
+              <Form.Label>Account / In stock</Form.Label>
               <Form.Control
                 type='number' min="0"
                 placeholder='Enter countInStock'
@@ -186,7 +186,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Button type='submit' variant='primary'>
-              Mise à jour
+            Update
             </Button>
           </Form>
         )}

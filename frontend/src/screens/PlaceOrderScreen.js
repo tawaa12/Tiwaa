@@ -67,9 +67,9 @@ const PlaceOrderScreen = ({ history }) => {
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>Expédition</h2>
+              <h2>Delivery</h2>
               <p>
-                <strong>Adresse:</strong>
+                <strong>Address:</strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
                 {cart.shippingAddress.postalCode},{' '}
                 {cart.shippingAddress.country}
@@ -77,15 +77,15 @@ const PlaceOrderScreen = ({ history }) => {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Mode de paiement</h2>
-              <strong>Méthode: </strong>
+              <h2>Payment mode</h2>
+              <strong>Method: </strong>
               {cart.paymentMethod}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Commandés articles</h2>
+              <h2>Ordered items</h2>
               {cart.cartItems.length === 0 ? (
-                <Message>Votre panier est vide</Message>
+                <Message>Your cart is empty</Message>
               ) : (
                 <ListGroup variant='flush'>
                   {cart.cartItems.map((item, index) => (
@@ -119,17 +119,17 @@ const PlaceOrderScreen = ({ history }) => {
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h2>Récapitulatif de la commande</h2>
+                <h2>Order summary</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Articles</Col>
+                  <Col>Items </Col>
                   <Col>{cart.itemsPrice}€</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Expédition</Col>
+                  <Col>Delivery</Col>
                   <Col>{cart.shippingPrice}€</Col>
                 </Row>
               </ListGroup.Item>
@@ -155,7 +155,7 @@ const PlaceOrderScreen = ({ history }) => {
                   disabled={cart.cartItems === 0}
                   onClick={placeOrderHandler}
                 >
-                  Passer la commande
+                  Proceed to checkout
                 </Button>
               </ListGroup.Item>
             </ListGroup>

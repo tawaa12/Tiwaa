@@ -26,10 +26,10 @@ const PaymentScreen = ({ history }) => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 step3 />
-      <h1>Mode de paiement</h1>
+      <h1>Payment mode</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as='legend'>Sélectionnez la méthode</Form.Label>
+          <Form.Label as='legend'>Select the method</Form.Label>
           <Col>
             <Form.Check
               type='radio'
@@ -52,7 +52,7 @@ const PaymentScreen = ({ history }) => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Continuez
+        Continue
         </Button>
       </Form>
     </FormContainer>

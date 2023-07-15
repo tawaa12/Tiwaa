@@ -91,12 +91,12 @@ const OrderScreen = ({ match, history }) => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
-      <h1>Commande {order._id}</h1>
+      <h1>Commande </h1>
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>Expédition</h2>
+              <h2>Shipping</h2>
               <p>
                 <strong>Nom: </strong> {order.user.name}
               </p>
@@ -112,30 +112,30 @@ const OrderScreen = ({ match, history }) => {
               </p>
               {order.isDelivered ? (
                 <Message variant='success'>
-                  Livré le {order.deliveredAt}
+                Delivered on {order.deliveredAt}
                 </Message>
               ) : (
-                <Message variant='danger'>Non livrés</Message>
+                <Message variant='danger'>Not delivered</Message>
               )}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Mode de paiement</h2>
+              <h2>Payment mode</h2>
               <p>
-                <strong>Méthode: </strong>
+                <strong>Method: </strong>
                 {order.paymentMethod}
               </p>
               {order.isPaid ? (
-                <Message variant='success'>Payé le {order.paidAt}</Message>
+                <Message variant='success'>Paid on {order.paidAt}</Message>
               ) : (
-                <Message variant='danger'>Impayé</Message>
+                <Message variant='danger'>Unpaid</Message>
               )}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2> commandés Impayé </h2>
+              <h2> Ordered, unpaid </h2>
               {order.orderItems.length === 0 ? (
-                <Message>La commande est vide</Message>
+                <Message>The order is empty</Message>
               ) : (
                 <ListGroup variant='flush'>
                   {order.orderItems.map((item, index) => (
@@ -169,17 +169,17 @@ const OrderScreen = ({ match, history }) => {
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h2>Récapitulatif de la commande</h2>
+                <h2>Order summary</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Articles</Col>
+                  <Col>Items</Col>
                   <Col>{order.itemsPrice}€</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Expédition</Col>
+                  <Col>Shipping</Col>
                   <Col>{order.shippingPrice}€</Col>
                 </Row>
               </ListGroup.Item>
@@ -219,7 +219,7 @@ const OrderScreen = ({ match, history }) => {
                       className='btn btn-block'
                       onClick={deliverHandler}
                     >
-                      Marquer comme livré
+                    Mark as delivered
                     </Button>
                   </ListGroup.Item>
                 )}
